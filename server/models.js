@@ -21,6 +21,17 @@ module.exports = {
           callback(null, results);
         }
       })
+    },
+    delete: function(player, callback) {
+      //might need to come back to this at some point
+      var query = `truncate randomTeams;`
+      db.query(query, function(err, results) {
+        if (err) {
+          callback(err);
+        } else {
+          callback(null, results);
+        }
+      })
     }
   }
 }

@@ -14,3 +14,4 @@ app.listen(port, function(){
 
 app.get('/players', controllers.players.get);
 app.post('/players', controllers.players.post);
+app.post('/delete', controllers.players.delete);

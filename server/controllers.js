@@ -19,6 +19,15 @@ module.exports = {
           res.send(results);
         }
       });
+    },
+    delete: function (req, res) {
+      models.players.delete(req.body.name, (err, results) => {
+        if (err) {
+          res.sendStatus(400);
+        } else {
+          res.send(results);
+        }
+      });
     }
   }
 }

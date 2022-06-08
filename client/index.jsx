@@ -80,10 +80,36 @@ class App extends React.Component {
     })
   }
 
+  empty() {
+    $.ajax({
+      url: '/delete',
+      method: 'POST',
+      data: {name: name},
+      success: (result) => {
+        $.ajax({
+          url: '/players',
+          method: 'GET',
+          success: (result) => {
+            this.setState({
+              players: [...result]
+            });
+          },
+          error: function() {
+            console.log('Error ajax get');
+          }
+        })
+      },
+      error: function() {
+        console.log('Error ajax delete');
+      }
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Random Team Generator</h1>
+        <button onClick={() => {this.empty()}}>Empty</button>
         <PlayerList players={this.state.players}/>
         <br></br>
         <AddPlayer addPlayer={this.addPlayer.bind(this)}/>
