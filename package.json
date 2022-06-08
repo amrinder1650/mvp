@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.js --watch",
     "watch": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,7 @@
     "express": "^4.18.1",
     "jquery": "^3.6.0",
     "mysql": "^2.18.1",
+    "path": "^0.12.7",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },

@@ -1,6 +1,13 @@
+var path = require('path');
+var entrysrc = path.join(__dirname, '/client');
+var outputsrc = path.join(__dirname, '/public');
+
 module.exports = {
-  entry: './client/index.js',
-  output: './public/app.js',
+  entry: entrysrc,
+  output: {
+    filename: 'bundle.js',
+    path: outputsrc
+  },
   module: {
     rules: [
       {
