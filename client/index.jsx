@@ -91,8 +91,10 @@ class App extends React.Component {
           method: 'GET',
           success: (result) => {
             this.setState({
-              players: [...result]
+              players: [...result],
+              teams: []
             });
+            this.randomize();
           },
           error: function() {
             console.log('Error ajax get');
