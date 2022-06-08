@@ -7,7 +7,7 @@ var PlayerList = (props) => {
       <h2>List of Players</h2>
       <div>
         {props.players.map(player =>
-          <Player key={player.id} name={player.player}/>
+          <Player key={player.id} id={player.id} name={player.player}/>
         )}
       </div>
     </div>

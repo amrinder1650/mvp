@@ -3,7 +3,7 @@ import React from 'react';
 var Player = (props) => {
   return (
     <div>
-      {props.name}
+      {props.id}. {props.name}
     </div>
   )
 }

@@ -12,7 +12,7 @@ module.exports = {
       });
     },
     post: function (req, res) {
-      models.players.post(req.body.data, (err, results) => {
+      models.players.post(req.body.name, (err, results) => {
         if (err) {
           res.sendStatus(400);
         } else {

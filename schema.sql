@@ -8,4 +8,4 @@ create table randomTeams (
   primary key (id)
 );
 
-insert into randomTeams (player) values ('Alex McCarthy');
+insert into randomTeams (player) values ('Serena Williams');
